@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+#navbar {
+  background: linear-gradient(45deg, #bcecdf, #8ccaad);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  position: relative;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+#navbar a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+#navbar a:hover::before {
+  width: 100%;
+}
+
+#navbar a:hover {
+  color: #000000;
+}
+
+#navbar a.active::before {
+  width: 100%;
+}
+
+section {
+  padding: 60px 20px;
+  height: 100vh;
+}
+
+#home {
+  background-color: #f2f2f2;
+}
+
+#about {
+  background-color: #e6e6e6;
+}
+
+#services {
+  background-color: #cccccc;
+}
+
+#contact {
+  background-color: #b3b3b3;
+}
